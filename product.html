@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product — SIROKITOGOMU</title>
+    <link rel="stylesheet" href="gayyyyy.css">
+    <script src="product.js" defer></script>
+</head>
+<body>
+
+<header class="header">
+    <a href="index.html" class="logo">sirokitogomu</a>
+
+    <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="index.html#items">Items</a>
+        <a href="index.html#about">About Us</a>
+    </nav>
+
+    <a href="cart.html" class="cart-link">
+        Cart <span id="cart-count">0</span>
+    </a>
+</header>
+
+<main class="product-details" id="product-details">
+
+    <div class="product-image">
+        <img id="product-image" src="" alt="Product">
+    </div>
+
+    <div class="product-info">
+
+        <p class="eyebrow">SIROKITOGOMU / COLLECTION</p>
+
+        <h1 id="product-name"></h1>
+
+        <p class="price" id="product-price"></p>
+
+        <section class="product-description">
+            <h3>DESCRIPTION</h3>
+            <p id="product-description"></p>
+        </section>
+
+        <section class="product-specs">
+            <h3>DETAILS</h3>
+            <p id="product-material"></p>
+            <p id="product-condition"></p>
+            <p id="product-origin"></p>
+        </section>
+
+        <section class="size-selector">
+            <h3>SELECT SIZE</h3>
+
+            <div id="clothing-size-container">
+                <select id="clothing-size">
+                    <option value="">Choose size</option>
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+            </div>
+
+            <div id="shoe-size-container" hidden>
+                <label for="shoe-system">SIZE SYSTEM</label>
+                <select id="shoe-system">
+                    <option value="eu">EU</option>
+                    <option value="uk">UK</option>
+                    <option value="usMen">US MEN</option>
+                    <option value="usWomen">US WOMEN</option>
+                    <option value="jp">JP / CM</option>
+                </select>
+
+                <label for="shoe-size">SHOE SIZE</label>
+                <select id="shoe-size">
+                    <option value="">Choose size</option>
+                </select>
+
+                <p id="shoe-conversion" class="size-guide">
+                    Select a size to see international equivalents.
+                </p>
+            </div>
+        </section>
+
+        <button class="add-to-cart" id="add-to-cart">
+            ADD TO CART
+        </button>
+
+        <p id="product-message" class="product-message"></p>
+
+        <a href="index.html" class="back-link">
+            ← BACK TO ITEMS
+        </a>
+
+    </div>
+</main>
+
+</body>
+</html>

@@ -4,95 +4,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sirokitogomu</title>
+    <title>SIROKITOGOMU</title>
     <link rel="stylesheet" href="gayyyyy.css">
 </head>
 <body>
 
 <header class="header">
-    <a href="/" class="logo">sirokitogomu</a>
+    <a href="index.html" class="logo">sirokitogomu</a>
 
     <nav class="nav">
-        <a href="#">Home</a>
-        <a href="#">Items</a>
-        <a href="#">About Us</a>
+        <a href="index.html">Home</a>
+        <a href="#items">Items</a>
+        <a href="#about">About Us</a>
     </nav>
 
-    <div class="header-actions">
-        <button>Search</button>
-        <button>Cart</button>
-    </div>
+    <a href="cart.html" class="cart-link">
+        Cart <span id="cart-count">0</span>
+    </a>
 </header>
 
-<main class="products">
+<main class="products" id="items">
 
-    <h2 class="products-title">BEST ITEMS</h2>
+    <p class="eyebrow">TOKYO — JAPAN / UNDERGROUND FASHION</p>
+    <h1 class="products-title">BEST ITEMS</h1>
 
     <div class="product-list">
 
-        <div class="product-card">
-            <img src="img/pr1.jpg" alt="Product">
-            <h3>Comme des Garçons Comme des Garçons Black Satin Pan Collar Ruffled Blouse</h3>
+        <article class="product-card">
+            <a href="product.html?id=1">
+                <img src="img/pr1.jpg" alt="Comme des Garçons Blouse">
+            </a>
+            <p class="item-number">01 / CLOTHING</p>
+            <h2>Comme des Garçons Comme des Garçons Black Satin Pan Collar Ruffled Blouse</h2>
             <p class="price">$500</p>
-            <button>View Product</button>
-        </div>
+            <a href="product.html?id=1" class="view-btn">VIEW PRODUCT</a>
+        </article>
 
-        <div class="product-card">
-            <img src="img/pr2.jpg" alt="Product">
-            <h3>alice auaa メッシュカットソ</h3>
+        <article class="product-card">
+            <a href="product.html?id=2">
+                <img src="img/pr2.jpg" alt="alice auaa Mesh Cutsew">
+            </a>
+            <p class="item-number">02 / CLOTHING</p>
+            <h2>alice auaa Mesh Cutsew</h2>
             <p class="price">$200</p>
-            <button>View Product</button>
-        </div>
+            <a href="product.html?id=2" class="view-btn">VIEW PRODUCT</a>
+        </article>
 
-        <div class="product-card">
-            <img src="img/pr3.jpg" alt="Product">
-            <h3>The Old Curiosity Shop x Kids Love Gaite Black Croc-Embossed Hog Toe Boots</h3>
+        <article class="product-card">
+            <a href="product.html?id=3">
+                <img src="img/pr3.jpg" alt="Black Croc-Embossed Boots">
+            </a>
+            <p class="item-number">03 / FOOTWEAR</p>
+            <h2>The Old Curiosity Shop x Kids Love Gaite Black Croc-Embossed Hog Toe Boots</h2>
             <p class="price">$1100</p>
-            <button>View Product</button>
-        </div>
+            <a href="product.html?id=3" class="view-btn">VIEW PRODUCT</a>
+        </article>
 
-        <div class="product-card">
-            <img src="img/pr4.jpg" alt="Product">
-            <h3>Japanese Vintage Jacket</h3>
+        <article class="product-card">
+            <a href="product.html?id=4">
+                <img src="img/pr4.jpg" alt="Japanese Vintage Jacket">
+            </a>
+            <p class="item-number">04 / CLOTHING</p>
+            <h2>Japanese Vintage Jacket</h2>
             <p class="price">$350</p>
-            <button>View Product</button>
-        </div>
+            <a href="product.html?id=4" class="view-btn">VIEW PRODUCT</a>
+        </article>
 
-        <div class="product-card">
-            <img src="img/pr5.jpg" alt="Product">
-            <h3>Black Avant-Garde Trousers</h3>
+        <article class="product-card">
+            <a href="product.html?id=5">
+                <img src="img/pr5.jpg" alt="Black Avant-Garde Trousers">
+            </a>
+            <p class="item-number">05 / CLOTHING</p>
+            <h2>Black Avant-Garde Trousers</h2>
             <p class="price">$280</p>
-            <button>View Product</button>
-        </div>
+            <a href="product.html?id=5" class="view-btn">VIEW PRODUCT</a>
+        </article>
 
     </div>
 </main>
 
-<footer class="footer">
+<footer class="footer" id="about">
 
     <div class="footer-content">
 
-        <div class="footer-brand">
+        <div>
             <h2>sirokitogomu</h2>
             <p>Japanese Underground Fashion</p>
             <p>Curated fashion from Tokyo, Japan.</p>
         </div>
 
-        <div class="footer-info">
+        <div>
             <h3>LOCATION</h3>
             <p>Tokyo, Japan</p>
             <p>Shibuya, Tokyo</p>
-            <p>Japan 〒150-0001</p>
         </div>
 
-        <div class="footer-info">
+        <div>
             <h3>INFORMATION</h3>
             <p>About Us</p>
             <p>Shipping & Delivery</p>
             <p>Returns & Exchanges</p>
         </div>
 
-        <div class="footer-info">
+        <div>
             <h3>CONTACT</h3>
             <p>Telegram: @fooboookyyy</p>
         </div>
@@ -111,6 +125,12 @@
     </div>
 
 </footer>
+
+<script>
+    const cart = JSON.parse(localStorage.getItem("cart") || "[]");
+    const count = cart.reduce((sum, item) => sum + item.quantity, 0);
+    document.getElementById("cart-count").textContent = count;
+</script>
 
 </body>
 </html>
